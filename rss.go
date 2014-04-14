@@ -132,6 +132,8 @@ func (this *Feed) readRss2(doc *xmlx.Document) (err error) {
 			i = new(Item)
 			i.Title = item.S(ns, "title")
 			i.Description = item.S(ns, "description")
+			i.Latitude = item.S(ns, "lat")
+			i.Longitude = item.S(ns, "long")
 
 			tl = item.SelectNodes(ns, "link")
 			for _, v := range tl {

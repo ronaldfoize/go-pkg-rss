@@ -18,6 +18,8 @@ type Item struct {
 	Guid        *string
 	PubDate     string
 	Source      *Source
+	Latitude    string
+	Longitude   string
 
 	// Atom specific fields
 	Id           string
